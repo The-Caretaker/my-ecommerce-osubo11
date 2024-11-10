@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>E-commerce Platform</h1>
+    </div>
+    
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- User Registration -->
+        <!-- User Registration -->
+<section id="register" class="card">
+    <h2>User Registration</h2>
+    <form id="registrationForm">
+        <label>Username:</label>
+        <input type="text" id="username" required><br>
+        
+        <label>Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label>Password:</label>
+        <input type="password" id="password" required>
+        <small id="passwordMessage" style="color: red;"></small><br>
+
+        <button type="submit">Register</button>
+    </form>
+    <p id="registrationMessage"></p>
+</section>
+
+        
+<!-- Product Search -->
+<section id="search" class="card">
+    <h2>Search Products</h2>
+    <input type="text" id="searchQuery" placeholder="Search products...">
+    <button onclick="searchProducts()">Search</button>
+</section>
+
+<!-- Product Display Section -->
+<div id="productDisplay" class="product-container"></div>
+
+
+        <!-- Recommendations -->
+        <section id="recommendations" class="card">
+            <h2>Product Recommendations</h2>
+            <input type="text" id="recommendationUserId" placeholder="Enter User ID for recommendations">
+            <button onclick="getRecommendations()">Get Recommendations</button>
+            <ul id="recommendationList"></ul>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

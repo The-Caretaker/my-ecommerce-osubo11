@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Registration/Login Section -->
+    <div id="authSection" class="auth-section">
+        <h2 id="authTitle">Register or Login</h2>
+        
+        <div id="registrationForm">
+            <h3>Register</h3>
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+        </div>
+
+        <div id="loginForm">
+            <h3>Login</h3>
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- Main Site Section -->
+    <div id="mainSite" class="main-site" style="display: none;">
+        <h2>Welcome to E-commerce Platform</h2>
+        <button onclick="logout()">Logout</button>
+        <!-- Product Search -->
+        <section id="search">
+            <input type="text" id="searchQuery" placeholder="Search products...">
+            <button onclick="searchProducts()">Search</button>
+        </section>
+        <!-- Product Display Section -->
+        <div id="productDisplay"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
